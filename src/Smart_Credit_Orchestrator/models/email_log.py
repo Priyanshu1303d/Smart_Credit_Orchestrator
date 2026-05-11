@@ -7,7 +7,7 @@ class EmailLog(BaseModel):
     """Audit record written to SQLite for every processed invoice."""
 
     id: Optional[int] = Field(default=None, ge=1, description="Unique database ID")
-    invoice_no: str = Field(..., min_length=3, max_length= 10, description="Unique invoice number")
+    invoice_no: str = Field(..., min_length=3, max_length=50, description="Unique invoice number")
     client_name: str = Field(..., min_length=2, max_length=30, description="Client or company name")
     contact_email_masked: str = Field( ..., min_length=5, max_length=120, description="Masked client email")
     amount: float = Field(..., gt=0, le=1_000_000_000, description="Invoice amount")

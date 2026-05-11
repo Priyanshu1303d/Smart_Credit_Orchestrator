@@ -1,0 +1,21 @@
+invoice_no,client_name,client_first_name,amount,currency,due_date,contact_email,follow_up_count,days_overdue,payment_link,finance_manager_email
+INV-2024-001,Rajesh Kapoor,Rajesh,45000.00,INR,2026-05-04,rajesh.kapoor@techsolutions.in,0,7,https://pay.smartcredit.in/INV-2024-001,finance@smartcredit.in
+INV-2024-002,Priya Mehta,Priya,120000.00,INR,2026-05-03,priya.mehta@infratech.co.in,0,8,https://pay.smartcredit.in/INV-2024-002,finance@smartcredit.in
+INV-2024-003,Anil Sharma,Anil,75500.00,INR,2026-04-29,anil.sharma@globallogic.in,1,13,https://pay.smartcredit.in/INV-2024-003,finance@smartcredit.in
+INV-2024-004,Sunita Gupta,Sunita,230000.00,INR,2026-04-27,sunita.gupta@nexgen.io,1,14,https://pay.smartcredit.in/INV-2024-004,finance@smartcredit.in
+INV-2024-005,Vikram Rathore,Vikram,58750.00,INR,2026-04-25,vikram.rathore@digitalhive.in,2,17,https://pay.smartcredit.in/INV-2024-005,finance@smartcredit.in
+INV-2024-006,Kavitha Nair,Kavitha,310000.00,INR,2026-04-22,kavitha.nair@buildbridge.co.in,2,20,https://pay.smartcredit.in/INV-2024-006,finance@smartcredit.in
+INV-2024-007,Arjun Desai,Arjun,92000.00,INR,2026-04-19,arjun.desai@cloudworks.in,3,23,https://pay.smartcredit.in/INV-2024-007,finance@smartcredit.in
+INV-2024-008,Meera Pillai,Meera,175000.00,INR,2026-04-17,meera.pillai@fusiontech.in,3,25,https://pay.smartcredit.in/INV-2024-008,finance@smartcredit.in
+INV-2024-009,Rohit Verma,Rohit,450000.00,INR,2026-04-15,rohit.verma@enterplex.in,3,27,https://pay.smartcredit.in/INV-2024-009,finance@smartcredit.in
+INV-2024-010,Deepa Krishnan,Deepa,88000.00,INR,2026-04-11,deepa.krishnan@softbridge.co.in,4,31,https://pay.smartcredit.in/INV-2024-010,finance@smartcredit.in
+INV-2024-011,Sandeep Joshi,Sandeep,600000.00,INR,2026-04-08,sandeep.joshi@megacorp.in,4,34,https://pay.smartcredit.in/INV-2024-011,finance@smartcredit.in
+INV-2024-012,Tanvi Bhatia,Tanvi,33500.00,INR,2026-05-05,tanvi.bhatia@startupnest.in,0,6,https://pay.smartcredit.in/INV-2024-012,finance@smartcredit.in
+INV-2024-013,Kiran Reddy,Kiran,150000.00,INR,2026-04-28,kiran.reddy@techprime.in,1,13,https://pay.smartcredit.in/INV-2024-013,finance@smartcredit.in
+INV-2024-014,Harish Patel,Harish,200000.00,INR,2026-04-24,harish.patel@alphanet.in,2,18,https://pay.smartcredit.in/INV-2024-014,finance@smartcredit.in
+INV-2024-015,Nalini Sriram,Nalini,525000.00,INR,2026-04-20,nalini.sriram@zebraworks.in,3,22,https://pay.smartcredit.in/INV-2024-015,finance@smartcredit.in
+INV-2024-016,Amit Tiwari,Amit,78000.00,INR,2026-04-13,amit.tiwari@horizonit.in,4,29,https://pay.smartcredit.in/INV-2024-016,finance@smartcredit.in
+INV-2024-017,Pooja Banerjee,Pooja,990000.00,INR,2026-04-06,pooja.banerjee@globalsystems.in,4,36,https://pay.smartcredit.in/INV-2024-017,finance@smartcredit.in
+INV-2024-018,Suresh Iyer,Suresh,42000.00,INR,2026-05-06,suresh.iyer@deltacorp.in,0,5,https://pay.smartcredit.in/INV-2024-018,finance@smartcredit.in
+INV-2024-019,Nandini Choudhury,Nandini,265000.00,INR,2026-04-26,nandini.choudhury@prismtech.in,2,16,https://pay.smartcredit.in/INV-2024-019,finance@smartcredit.in
+INV-2024-020,Ramesh Agarwal,Ramesh,380000.00,INR,2026-04-10,ramesh.agarwal@nexasoft.in,4,32,https://pay.smartcredit.in/INV-2024-020,finance@smartcredit.in

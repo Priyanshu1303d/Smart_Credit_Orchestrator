@@ -6,7 +6,7 @@ from datetime import datetime
 class InvoiceRecord(BaseModel):
     """Represents a single invoice / credit record from the data source."""
 
-    invoice_no: str = Field(...,min_length=3,max_length=10,description="Unique invoice number")
+    invoice_no: str = Field(...,min_length=3,max_length=50,description="Unique invoice number")
     client_name: str = Field(...,min_length=2,max_length=30,description="Full client/company name")
     client_first_name: str = Field(...,min_length=2,max_length=20,description="Client first name")
     amount: float = Field(...,gt=0,le=1_000_000_000,description="Invoice amount")
@@ -67,7 +67,7 @@ class EmailOutput(BaseModel):
     body: str = Field( ..., min_length=50,max_length=5000,description="Generated email body")
     tone_stage: int = Field(...,ge=1,le=4,description="Escalation tone stage")
     tone_label: str = Field( ..., min_length=3,max_length=50,description="Human readable tone label")
-    invoice_no: str = Field(...,min_length=3,max_length=10,description="Invoice number" )
+    invoice_no: str = Field(...,min_length=3,max_length=50,description="Invoice number" )
     client_name: str = Field(...,min_length=2,max_length=30, description="Client name" )
     amount: float = Field(..., gt=0, le=1_000_000_000,description="Invoice amount")
 

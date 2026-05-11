@@ -1,35 +1,21 @@
-fastapi
-uvicorn
-streamlit
+# Smart Credit Orchestrator – Python Dependencies
 
-langchain
-langgraph
-langchain-openai
-langchain-community
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9
 
-openai
+langchain>=0.2.0
+langgraph>=0.1.0
+langchain-core>=0.2.0
+langchain-groq>=0.1.0
+langchain-community>=0.2.0
+langsmith>=0.1.0
 
-pydantic
-python-dotenv
+pydantic[email]>=2.6.0
+pandas>=2.2.0
+python-dotenv>=1.0.0
 
-pandas
-numpy
-
-sqlalchemy
-
-jinja2
-
-apscheduler
-email-validator
-python-multipart
-
-httpx
-requests
-
-langsmith
-pytest
-tqdm
-
-ipykernel
+pytest>=8.2.0
+ipykernel>=6.29.0
 
 -e .
