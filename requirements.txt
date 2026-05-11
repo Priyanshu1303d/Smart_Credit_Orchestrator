@@ -30,4 +30,6 @@ langsmith
 pytest
 tqdm
 
+ipykernel
+
 -e .
