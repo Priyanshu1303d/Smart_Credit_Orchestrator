@@ -1,0 +1,54 @@
+[
+  {
+    "invoice_no": "INV-2024-001",
+    "client_name": "Rajesh Kapoor",
+    "amount": 45000.0,
+    "currency": "INR",
+    "days_overdue": 7,
+    "tone_stage": 1,
+    "tone_label": "Warm & Friendly",
+    "subject": "Overdue Payment Reminder for INV-2024-001 - INR 45,000.00",
+    "body": "Rajesh, we hope you're doing well. We wanted to gently remind you that invoice INV-2024-001 for INR 45,000.00 is now 7 days overdue, with the original due date being 4th May 2026. To settle this, please visit our payment link: https://pay.smartcredit.in/INV-2024-001. Thank you for your continued business and we look forward to resolving this promptly. Best regards,",
+    "validation": "passed",
+    "generated_at": "2026-05-11T18:22:26.458547+00:00"
+  },
+  {
+    "invoice_no": "INV-2024-003",
+    "client_name": "Sneha Patel",
+    "amount": 78500.0,
+    "currency": "INR",
+    "days_overdue": 14,
+    "tone_stage": 2,
+    "tone_label": "Polite but Firm",
+    "subject": "Overdue Payment: INV-2024-003 - Immediate Attention Required",
+    "body": "Dear Ms. Patel, we are writing to follow up on our previous reminder regarding invoice INV-2024-003 for INR 78500.0, which was due on 2026-04-27 and is now 14 days overdue. Could you please confirm your payment status or provide an expected payment date? To settle this invoice, please visit https://pay.smartcredit.in/INV-2024-003. We appreciate your prompt attention to this matter.",
+    "validation": "passed",
+    "generated_at": "2026-05-11T18:22:27.879764+00:00"
+  },
+  {
+    "invoice_no": "INV-2024-005",
+    "client_name": "Vikram Singh",
+    "amount": 125000.0,
+    "currency": "INR",
+    "days_overdue": 21,
+    "tone_stage": 3,
+    "tone_label": "Formal & Serious",
+    "subject": "IMPORTANT: Overdue Payment for INV-2024-005",
+    "body": "Dear Mr. Singh, we are writing to bring to your attention that our invoice INV-2024-005 for INR 125000.0 is now 21 days overdue, with the original due date being 2026-04-20. Despite two previous reminders, we have yet to receive payment. The continued non-payment is causing concern and may impact your credit terms. We urge you to settle this amount immediately or provide a written confirmation of your payment timeline within 48 hours. Please respond to finance@smartcredit.in. You can also make the payment directly via https://pay.smartcredit.in/INV-2024-005. We appreciate your prompt attention to this matter.",
+    "validation": "passed",
+    "generated_at": "2026-05-11T18:22:29.398819+00:00"
+  },
+  {
+    "invoice_no": "INV-2024-007",
+    "client_name": "Arjun Desai",
+    "amount": 92000.0,
+    "currency": "INR",
+    "days_overdue": 23,
+    "tone_stage": 4,
+    "tone_label": "Stern & Urgent",
+    "subject": "FINAL NOTICE: Overdue Invoice INV-2024-007 for INR 92,000.0",
+    "body": "Dear Mr. Desai, this is the FINAL automated reminder for invoice INV-2024-007, which is 23 days overdue. The amount of INR 92,000.0 was due on 2026-04-19. We urge you to settle this immediately or contact our finance department at finance@smartcredit.in within 24 hours to avoid escalation to our recovery process. Please make the payment at https://pay.smartcredit.in/INV-2024-007. We expect your prompt attention to this matter. Sincerely, Smart Credit Team",
+    "validation": "passed",
+    "generated_at": "2026-05-11T18:22:31.137467+00:00"
+  }
+]

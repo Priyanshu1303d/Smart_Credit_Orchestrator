@@ -190,5 +190,37 @@
     "send_status": "dry_run",
     "is_escalated": false,
     "timestamp": "2026-05-11T17:59:58.214732+00:00"
+  },
+  {
+    "id": 13,
+    "invoice_no": "INV-2024-003",
+    "client_name": "Anil Sharma",
+    "contact_email_masked": "a**********@globallogic.in",
+    "amount": 75500.0,
+    "currency": "INR",
+    "days_overdue": 13,
+    "tone_stage": 2,
+    "tone_label": "Polite but Firm",
+    "subject": "Overdue Invoice INV-2024-003: Payment Confirmation Required",
+    "body_preview": "Dear Mr. Sharma, we are writing to follow up on our previous reminder regarding invoice INV-2024-003 for INR 75,500.00, which was due on 29th April 2026 and is now 13 days overdue. Could you please confirm the current payment status or provide an expected payment date? To settle this invoice, please",
+    "send_status": "dry_run",
+    "is_escalated": false,
+    "timestamp": "2026-05-11T18:10:54.285940+00:00"
+  },
+  {
+    "id": 14,
+    "invoice_no": "INV-2024-005",
+    "client_name": "Vikram Rathore",
+    "contact_email_masked": "v*************@digitalhive.in",
+    "amount": 58750.0,
+    "currency": "INR",
+    "days_overdue": 17,
+    "tone_stage": 3,
+    "tone_label": "Formal & Serious",
+    "subject": "IMPORTANT: Overdue Payment for INV-2024-005",
+    "body_preview": "Dear Mr. Rathore, this is our third reminder regarding the overdue payment of INR 58750.0 for invoice INV-2024-005, which was due on 2026-04-25 and is now 17 days overdue. Despite previous reminders, we have yet to receive payment. The continued non-payment is causing concern and may impact your cre",
+    "send_status": "dry_run",
+    "is_escalated": false,
+    "timestamp": "2026-05-11T18:11:54.903926+00:00"
   }
 ]
