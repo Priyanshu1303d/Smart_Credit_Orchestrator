@@ -89,7 +89,6 @@ Smart_Credit_Orchestrator/
 │
 ├── main.py                        # FastAPI app entry point
 ├── Dockerfile
-├── docker-compose.yml
 ├── requirements.txt
 └── .env.example
 ```
@@ -109,7 +108,7 @@ Smart_Credit_Orchestrator/
 | **Observability** | LangSmith |
 | **Audit Storage** | JSON flat file |
 | **Testing** | pytest (20 tests) |
-| **Containerisation** | Docker, Docker Compose |
+| **Containerisation** | Docker |
 
 ---
 
@@ -213,18 +212,6 @@ pytest tests/ -v
 
 ---
 
-## 🐳 Docker
-
-```bash
-# Build and run with Docker Compose
-docker-compose up --build
-
-# Run tests inside container
-docker-compose --profile test run test
-```
-
----
-
 ## 🌐 API Endpoints
 
 | Method | Endpoint | Description |
@@ -283,5 +270,5 @@ Validation : PASSED ✅
 ---
 
 <div align="center">
-  <i>Architected & Built by Priyanshu · Capstone Assignment 2 · 2026</i>
+  <i>Architected & Built by Priyanshu · 2026</i>
 </div>
