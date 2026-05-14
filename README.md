@@ -49,6 +49,7 @@ Smart_Credit_Orchestrator/
 ├── data/
 │   ├── sample_invoices.csv        # 20 synthetic Indian client invoices
 │   └── generated_logs.json        # Persistent JSON audit trail
+│   ├── sample_outputs.json        # Sample output generated
 │
 ├── src/Smart_Credit_Orchestrator/
 │   ├── graph/
