@@ -23,6 +23,8 @@ from src.Smart_Credit_Orchestrator.api.models import (
     EmailGeneratedResponse, BatchProcessResponse,
     AuditLogEntry, AuditStatsResponse, HealthResponse,
 )
+from fastapi import File, UploadFile
+import shutil
 from src.Smart_Credit_Orchestrator.graph.workflow import get_graph
 from src.Smart_Credit_Orchestrator.models.invoice import InvoiceRecord
 from src.Smart_Credit_Orchestrator.services import audit_service, escalation_service
@@ -32,6 +34,7 @@ logger = logging.getLogger(__name__)
 router = APIRouter()
 
 CSV_PATH = "./data/sample_invoices.csv"
+UPLOADED_FILE_PATH = "./data/uploaded_invoices.csv"
 
 
 def _run_agent(invoice: InvoiceRecord) -> dict:
@@ -71,6 +74,19 @@ def health():
         env=os.getenv("APP_ENV", "development"),
         langsmith_tracing=os.getenv("LANGCHAIN_TRACING_V2", "false").lower() == "true",
     )
+
+
+# ── Upload CSV ────────────────────────────────────────────────────────────────
+@router.post("/upload", tags=["Data"])
+async def upload_csv(file: UploadFile = File(...)):
+    """Upload a new CSV file to run the agent on."""
+    try:
+        with open(UPLOADED_FILE_PATH, "wb") as buffer:
+            shutil.copyfileobj(file.file, buffer)
+        return {"message": "File uploaded successfully", "file_path": UPLOADED_FILE_PATH}
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=str(exc))
+
 
 
 # ── Process single invoice ────────────────────────────────────────────────────

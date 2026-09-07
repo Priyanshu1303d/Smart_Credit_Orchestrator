@@ -22,7 +22,7 @@ def resolve_stage(days_overdue: int) -> tuple[int, bool]:
     Returns (tone_stage, is_escalated).
     is_escalated=True means skip email generation and flag for legal review.
     """
-    if days_overdue >= 30:
+    if days_overdue > 30:
         return 4, True
     if days_overdue >= 22:
         return 4, False

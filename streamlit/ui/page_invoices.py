@@ -17,9 +17,9 @@ def render():
       <p>All overdue invoices with computed escalation stage</p>
     </div>""", unsafe_allow_html=True)
 
-    csv = Path("./data/sample_invoices.csv")
+    csv = Path("./data/uploaded_invoices.csv") if Path("./data/uploaded_invoices.csv").exists() else Path("./data/sample_invoices.csv")
     if not csv.exists():
-        st.error("Invoice CSV not found at `data/sample_invoices.csv`")
+        st.error("Invoice CSV not found")
         return
 
     df = pd.read_csv(csv).fillna("")

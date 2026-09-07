@@ -21,7 +21,35 @@ def render():
       <p>Select an invoice and fire the LangGraph agent to generate a follow-up email</p>
     </div>""", unsafe_allow_html=True)
 
-    csv = Path("./data/sample_invoices.csv")
+    csv_source = st.radio("Choose Data Source:", ["Demo CSV", "Upload CSV"], horizontal=True)
+
+    if csv_source == "Upload CSV":
+        uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
+        if uploaded_file is not None:
+            if st.button("Confirm & Upload to Backend", use_container_width=True):
+                import requests
+                with st.spinner("Uploading to backend..."):
+                    files = {"file": (uploaded_file.name, uploaded_file.getvalue(), "text/csv")}
+                    try:
+                        api_url = os.getenv("API_URL", "http://localhost:8000")
+                        res = requests.post(f"{api_url}/api/v1/upload", files=files)
+                        if res.status_code == 200:
+                            st.success("File uploaded successfully!")
+                        else:
+                            st.error(f"Upload failed: {res.text}")
+                    except Exception as e:
+                        st.error(f"Connection error to FastAPI backend: {e}")
+        
+        csv = Path("./data/uploaded_invoices.csv")
+        if not csv.exists() and uploaded_file is None:
+            st.info("Please upload a CSV file to continue.")
+            return
+        elif not csv.exists():
+            st.warning("Please click 'Confirm & Upload to Backend' to save the file.")
+            return
+    else:
+        csv = Path("./data/sample_invoices.csv")
+
     if not csv.exists():
         st.error("Invoice CSV not found.")
         return

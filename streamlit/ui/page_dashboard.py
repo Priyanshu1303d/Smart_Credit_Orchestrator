@@ -37,7 +37,7 @@ def render():
 
     with col_left:
         st.markdown("#### 📊 Invoice Stage Distribution")
-        csv = Path("./data/sample_invoices.csv")
+        csv = Path("./data/uploaded_invoices.csv") if Path("./data/uploaded_invoices.csv").exists() else Path("./data/sample_invoices.csv")
         if csv.exists():
             df = pd.read_csv(csv)
             counts = {1: 0, 2: 0, 3: 0, 4: 0, 99: 0}
