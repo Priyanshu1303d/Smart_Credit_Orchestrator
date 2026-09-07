@@ -90,6 +90,8 @@ Smart_Credit_Orchestrator/
 │
 ├── main.py                        # FastAPI app entry point
 ├── Dockerfile
+├── .dockerignore
+├── Heroku.yml
 ├── requirements.txt
 └── .env.example
 ```
@@ -179,7 +181,7 @@ Copy `.env.example` to `.env` and add your keys:
 ```env
 # LLM — get your key at console.groq.com
 GROQ_API_KEY=gsk_your_groq_key_here
-GROQ_MODEL_NAME=llama-3.3-70b-versatile
+GROQ_MODEL_NAME=openai/gpt-oss-120b
 
 # Observability — get your key at smith.langchain.com
 LANGCHAIN_TRACING_V2=true
