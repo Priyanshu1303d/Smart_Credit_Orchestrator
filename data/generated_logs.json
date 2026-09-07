@@ -222,5 +222,21 @@
     "send_status": "dry_run",
     "is_escalated": false,
     "timestamp": "2026-05-11T18:11:54.903926+00:00"
+  },
+  {
+    "id": 15,
+    "invoice_no": "INV-2024-004",
+    "client_name": "Sunita Gupta",
+    "contact_email_masked": "s**********a@nexgen.io",
+    "amount": 230000.0,
+    "currency": "INR",
+    "days_overdue": 14,
+    "tone_stage": 2,
+    "tone_label": "Polite but Firm",
+    "subject": "Overdue Invoice INV-2024-004 – Action Required",
+    "body_preview": "Dear Ms. Gupta,\n\nI am writing to follow up on invoice INV-2024-004 dated 27 April 2026, amount INR 230,000.00, which is now 14 days overdue. A reminder was sent previously, but we have not yet received payment.\n\nCould you please confirm the status of this payment or advise the expected payment date?",
+    "send_status": "dry_run",
+    "is_escalated": false,
+    "timestamp": "2026-09-07T15:54:54.913882+00:00"
   }
 ]

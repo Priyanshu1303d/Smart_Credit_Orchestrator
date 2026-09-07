@@ -1,5 +1,5 @@
 """
-FastAPI Request / Response Models – Smart Credit Orchestrator
+FastAPI Request / Response Models - Smart Credit Orchestrator
 
 Pydantic models for API input validation and response serialisation.
 Separate from domain models (src/models/) to keep API contracts explicit.

@@ -4,17 +4,9 @@ No SMTP, no SendGrid, no external dependencies.
 """
 
 import logging
+from src.Smart_Credit_Orchestrator.utils.security import mask_email
 
 logger = logging.getLogger(__name__)
-
-
-def mask_email(email: str) -> str:
-    """Partially hide email for safe logging. e.g. rajesh@x.com → r****@x.com"""
-    if "@" not in email:
-        return "***"
-    local, domain = email.split("@", 1)
-    return local[0] + "*" * (len(local) - 1) + "@" + domain
-
 
 def send_email(to_email: str, subject: str, body: str, invoice_no: str) -> str:
     """

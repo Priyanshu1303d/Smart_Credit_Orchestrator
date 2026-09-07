@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Optional
 
 from src.Smart_Credit_Orchestrator.models.invoice import InvoiceRecord, EmailOutput
-from src.Smart_Credit_Orchestrator.services.email_service import mask_email
+from src.Smart_Credit_Orchestrator.utils.security import mask_email
 
 logger = logging.getLogger(__name__)
 

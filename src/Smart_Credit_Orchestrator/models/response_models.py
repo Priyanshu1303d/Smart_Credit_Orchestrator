@@ -1,9 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import List, Optional, Literal
 
-from app.models.email_log import EmailLog
-
-
 class ProcessInvoiceResponse(BaseModel):
     """Response returned after processing a single invoice."""
     invoice_no: str = Field(...,min_length=3,max_length=10,description="Processed invoice number")
