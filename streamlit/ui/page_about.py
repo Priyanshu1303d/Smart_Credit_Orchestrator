@@ -58,7 +58,7 @@ def render():
         st.markdown("""
         | Layer | Technology |
         |-------|-----------|
-        | LLM | Groq · `llama-3.3-70b-versatile` |
+        | LLM | Groq · `openai/gpt-oss-120b` |
         | Agent Framework | LangGraph (StateGraph) |
         | Tracing | LangSmith |
         | API | FastAPI + Uvicorn |
