@@ -13,6 +13,10 @@ from src.Smart_Credit_Orchestrator.graph.workflow import get_graph
 
 TONE_COLORS = {1: "#34d399", 2: "#38bdf8", 3: "#fbbf24", 4: "#f87171"}
 
+API_URL=os.getenv("API_URL")
+
+if not API_URL:
+    raise ValueError("API URL not found")
 
 def render():
     st.markdown("""
@@ -28,6 +32,12 @@ def render():
         if uploaded_file is not None:
             if st.button("Confirm & Upload to Backend", use_container_width=True):
                 import requests
+                
+                # Save it locally on Streamlit's server so Streamlit can read it for the dropdown
+                Path("./data").mkdir(exist_ok=True)
+                with open("./data/uploaded_invoices.csv", "wb") as f:
+                    f.write(uploaded_file.getvalue())
+
                 with st.spinner("Uploading to backend..."):
                     files = {"file": (uploaded_file.name, uploaded_file.getvalue(), "text/csv")}
                     try:
