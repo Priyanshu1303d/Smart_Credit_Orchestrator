@@ -2,6 +2,7 @@
   <img src="https://img.icons8.com/nolan/128/invoice.png" alt="Smart Credit Orchestrator Logo" width="100"/>
   <h1>Smart Credit Orchestrator 💼⚡</h1>
   <p><strong>An AI-powered Finance Credit Follow-Up Email Agent with Tone Escalation Orchestration</strong></p>
+  <p><strong>Live Link : https://smartcreditorchestrator.streamlit.app</strong></p>
 
   <p>
     <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
@@ -25,7 +26,7 @@
 
 **Smart Credit Orchestrator** is an end-to-end AI agent for automating invoice follow-up communications in a finance collection pipeline. It ingests overdue invoice records, classifies each account into an escalation stage based on days overdue, generates a professionally-toned follow-up email using a large language model, validates the output for hallucinations and prompt injections, and logs every action to a persistent audit trail — **all without a single manual email.**
 
-Powered by **LangGraph** for robust stateful agent orchestration and **Groq (`llama-3.3-70b-versatile`)** for lightning-fast LLM inference, the system enforces a strict 4-stage tone escalation matrix while automatically flagging critical accounts (30+ days) for legal review.
+Powered by **LangGraph** for robust stateful agent orchestration and **Groq (`openai/gpt-oss-120b`)** for lightning-fast LLM inference, the system enforces a strict 4-stage tone escalation matrix while automatically flagging critical accounts (30+ days) for legal review.
 
 ---
 
@@ -47,7 +48,8 @@ Powered by **LangGraph** for robust stateful agent orchestration and **Groq (`ll
 Smart_Credit_Orchestrator/
 │
 ├── data/
-│   ├── sample_invoices.csv        # 20 synthetic Indian client invoices
+│   ├── sample_invoices.csv        # 20 SYNTHETIC Indian client invoices
+│   ├── data_2.csv                 # 30 NEW SYNTHETIC Indian client invoices 
 │   └── generated_logs.json        # Persistent JSON audit trail
 │   ├── sample_outputs.json        # Sample output generated
 │
@@ -91,7 +93,7 @@ Smart_Credit_Orchestrator/
 ├── main.py                        # FastAPI app entry point
 ├── Dockerfile
 ├── .dockerignore
-├── Heroku.yml
+├── heroku.yml
 ├── requirements.txt
 └── .env.example
 ```
@@ -103,7 +105,7 @@ Smart_Credit_Orchestrator/
 | Component | Technologies |
 | :--- | :--- |
 | **Agent Framework** | LangGraph (StateGraph), LangChain |
-| **LLM Inference** | Groq · `llama-3.3-70b-versatile` |
+| **LLM Inference** | Groq · `openai/gpt-oss-120b` |
 | **Backend API** | FastAPI, Uvicorn, Python 3.12 |
 | **Frontend UI** | Streamlit (Dark Mode) |
 | **Data Validation** | Pydantic v2 |
@@ -112,6 +114,7 @@ Smart_Credit_Orchestrator/
 | **Audit Storage** | JSON flat file |
 | **Testing** | pytest (20 tests) |
 | **Containerisation** | Docker |
+| **Deployment** | Heroku(FastAPI Backend), Streamlit Cloud (Frontend) |
 
 ---
 
@@ -188,6 +191,7 @@ LANGCHAIN_TRACING_V2=true
 LANGCHAIN_API_KEY=lsv2_your_langsmith_key_here
 LANGCHAIN_PROJECT=smart-credit-orchestrator
 LANGCHAIN_ENDPOINT=https://api.smith.langchain.com
+API_URL=your-deployed-fastapi-backend-url
 ```
 
 ### 3. Run the FastAPI Backend
