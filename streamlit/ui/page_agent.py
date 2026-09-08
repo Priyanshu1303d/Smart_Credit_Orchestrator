@@ -51,6 +51,11 @@ def render():
                         st.error(f"Connection error to FastAPI backend: {e}")
         
         csv = Path("./data/uploaded_invoices.csv")
+        if csv.exists():
+            if st.button("🗑️ Remove Uploaded CSV", type="secondary"):
+                csv.unlink()
+                st.rerun()
+                
         if not csv.exists() and uploaded_file is None:
             st.info("Please upload a CSV file to continue.")
             return

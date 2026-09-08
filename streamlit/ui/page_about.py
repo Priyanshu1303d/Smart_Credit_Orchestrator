@@ -5,7 +5,7 @@ def render():
     st.markdown("""
     <div class="page-header">
       <h1>ℹ️ About This Project</h1>
-      <p>Smart Credit Orchestrator · Capstone Assignment 2 · AI Agent for Invoice Collections</p>
+      <p>Smart Credit Orchestrator · AI Agent for Invoice Collections</p>
     </div>""", unsafe_allow_html=True)
 
     # ── Hero ──────────────────────────────────────────────────────────────────
@@ -17,7 +17,7 @@ def render():
         An AI agent that automates invoice follow-up emails for the Finance team.
         It reads overdue invoice records, determines the correct escalation tone based on how many
         days past due the invoice is, generates a personalised email using a large language model,
-        logs every action to an audit trail, and flags critical accounts for legal review —
+        logs every action to an audit trail, and flags critical accounts for legal review -
         all without a single manual email.
       </p>
     </div>
@@ -103,4 +103,4 @@ def render():
         </div>""", unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
-    st.caption("Built by Priyanshu · Capstone Project · Assignment 2 · 2026")
+    st.caption("Built by Priyanshu · 2026")
