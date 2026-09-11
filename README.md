@@ -71,6 +71,9 @@ Smart_Credit_Orchestrator/
 │   │   ├── models.py              # FastAPI request/response schemas
 │   │   └── routes.py              # 6 REST API endpoints
 │   │
+│   ├── database/
+│   │   ├── audit.py               # Sqlite3 for audit logging  
+│   │
 │   ├── models/
 │   │   ├── invoice.py             # InvoiceRecord + EmailOutput Pydantic models
 │   │   └── email_log.py           # Audit log Pydantic model
