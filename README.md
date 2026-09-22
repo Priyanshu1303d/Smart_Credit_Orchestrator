@@ -120,41 +120,38 @@ Smart_Credit_Orchestrator/
 | **Deployment** | Heroku(FastAPI Backend), Streamlit Cloud (Frontend) |
 
 ---
+## System Architecture
 
-## 🔄 Agent Workflow (LangGraph)
+```mermaid
+graph TD
 
-```
-                    ┌─────────────────┐
-                    │  classify_stage │  ← Entry Point
-                    └────────┬────────┘
-                             │
-               ┌─────────────┴──────────────┐
-        (>30d) │                            │ (≤30d)
-               ▼                            ▼
-     ┌──────────────────┐        ┌──────────────────┐
-     │  escalate_record │        │  generate_email  │ ← Groq LLM
-     └────────┬─────────┘        └────────┬─────────┘
-              │                           │
-              │                  ┌────────▼─────────┐
-              │                  │  validate_output  │ ← 4-layer check
-              │                  └────────┬──────────┘
-              │            ┌──────────────┤
-              │       valid │             │ invalid
-              │             ▼             ▼
-              │      ┌──────────┐  ┌──────────────────┐
-              │      │send_email│  │ regenerate_email  │ ← retry ≤ 2
-              │      └────┬─────┘  └────────┬─────────┘
-              │           │              (exhausted)
-              │           │         ┌────────▼─────────┐
-              │           │         │   fail_invoice   │
-              │           │         └────────┬─────────┘
-              └───────────┴──────────────────┘
-                                    │
-                           ┌────────▼─────────┐
-                           │   write_audit    │ ← JSON log
-                           └────────┬─────────┘
-                                    │
-                                   END
+    A[Streamlit Dashboard] --> B[FastAPI REST API]
+    B --> C[Invoice Processing]
+    C --> D[classify_stage]
+
+    D -->|30+ days| E[escalate_record]
+    D -->|30 days or less| F[generate_email]
+
+    F --> G[Groq LLM]
+    G --> H[validate_output]
+
+    H -->|Valid| I[send_email]
+    H -->|Invalid| J[regenerate_email]
+
+    J -->|Retry up to 2| G
+    J -->|Retries exhausted| K[fail_invoice]
+
+    E --> L[write_audit]
+    I --> L
+    K --> L
+
+    L --> M[JSON Audit Log]
+
+    H -.-> N[Prompt Injection Check]
+    H -.-> O[Pydantic Invoice Validation]
+    L -.-> P[PII Masking]
+
+    M --> A
 ```
 
 ### Escalation Matrix
